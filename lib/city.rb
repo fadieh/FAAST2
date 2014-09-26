@@ -22,6 +22,10 @@ class City
 		@holder.delete(passenger)
 	end
 
+	def list_all_passengers
+		puts holder_count
+	end
+
 
 	# def holder
 	# 	@holder = []

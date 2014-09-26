@@ -23,4 +23,9 @@ describe City do
 		expect(city.holder_count).to eq(0)
 	end
 
+	it "should print a list of people" do
+		city = City.new
+		city.list_all_passengers
+	end
+
 end
