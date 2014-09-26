@@ -9,7 +9,18 @@ describe City do
 		expect(city.capacity).to eq(5000000)
 	end
 
-	it "should contain passengers" do
+	it "should accept passengers" do
+		city = City.new
+		city.accept_passenger(passenger)
+		expect(city.holder_count).to eq(1)
+	end
+
+	it "should release passengers" do
+		city = City.new
+		city.accept_passenger(passenger)
+		expect(city.holder_count).to eq(1)
+		city.release_passenger(passenger)
+		expect(city.holder_count).to eq(0)
 	end
 
 end
