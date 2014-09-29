@@ -23,10 +23,8 @@ class City
 	end
 
 	def list_all_passengers
-		puts holder_count
+		holder_count
 	end
-
-
 	# def holder
 	# 	@holder = []
 	# end
