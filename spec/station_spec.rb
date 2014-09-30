@@ -17,10 +17,18 @@ describe Station do
 	expect(station.passengers.count).to eq 0
 	end
 
-	it "should allow trains to stop" do
+	it "should allow trains to stop at the platform" do
 	station = Station.new
 	station.dock_train(train)
 	expect(station.platform).to include(train)
+	end
+
+	it "should allow trains to leave the platform" do
+	station = Station.new
+	station.dock_train(train)
+	expect(station.platform.count).to eq 1
+	station.depart_platform(train)
+	expect(station.platform.count).to eq 0
 	end
 
 end

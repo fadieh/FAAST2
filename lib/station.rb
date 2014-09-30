@@ -20,4 +20,10 @@ class Station
 		platform << train
 	end
 
+	def depart_platform(train)
+		platform.delete(train)
+	end
+
+
+
 end
